@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="startMenu" class="panel">
+        <h1>Tic Tac Toe</h1>
+        <p class="subtitle">Choose your mode, set difficulty, and start playing.</p>
+
+        <div class="mode-switch" role="tablist" aria-label="Game mode">
+          <button type="button" class="mode-btn active" data-mode="local">Local</button>
+          <button type="button" class="mode-btn" data-mode="ai">Vs AI</button>
+        </div>
+
+        <label class="field" id="nameField">
+          <span>Your name</span>
+          <input id="playerName" type="text" placeholder="Enter your name" />
+        </label>
+
+        <label class="field">
+          <span>Difficulty</span>
+          <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="impossible">Impossible</option>
+          </select>
+        </label>
+
+        <button id="startGame" class="primary-btn" type="button">Start Game</button>
+      </section>
+
+      <section id="gameSection" class="game-section hidden">
+        <p id="status" class="status">Player X starts</p>
+        <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board"></div>
+        <div class="game-actions">
+          <button id="restart" class="primary-btn" type="button">Restart Game</button>
+          <button id="backToMenu" class="secondary-btn" type="button">Back to Menu</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
